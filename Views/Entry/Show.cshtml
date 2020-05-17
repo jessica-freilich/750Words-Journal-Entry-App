@@ -1,0 +1,35 @@
+@model List<Entry>
+
+<h1>Your Entries</h1>
+@* CREATE AN ENTRY GOES HERE *@
+
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+@* List all the entries *@
+@foreach (var entry in Model)
+{
+    <div>
+        <p>@entry.Text</p>
+        <div>Word Count: @entry.WordCount</div>
+        <div>Emotion: @entry.Emotion.Name </div>
+        <hr>
+    </div>
+}
+@* @var wordCountArray; *@
+@* for each loop *@
+@{ string arrayOfWordCounts = "[";
+    foreach (var entry in Model)
+    {
+        arrayOfWordCounts+= entry.WordCount.ToString() + ",";
+    }
+    arrayOfWordCounts+= "]";
+}
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js">
+</script>
+@section Scripts{
+<script>    
+    myFunction(@arrayOfWordCounts);
+    console.log(myFunction);
+</script>
+}

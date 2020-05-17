@@ -1,0 +1,14 @@
+@model List<Emotion>
+
+<form method="POST" action="/Entry/Save">
+    <input type="text" name="Text">
+
+    <select id="emotions" name= "EmotionId">
+       @foreach (var emotion in Model)
+       {
+          <option value= "@emotion.Id">@emotion.Name </option>
+       }
+    </select>
+
+    <button type="submit" class="btn btn-warning">Save!</button>
+</form>
