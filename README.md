@@ -1,5 +1,5 @@
 # 750Words-Journal-Entry-App
-==Bootcamp student group exercise that was updated after group exercise ended==
+== Bootcamp student group exercise that was updated after group exercise ended ==
 
 Modified the text of the home page, which originally included the language of MVC's basic tutorial
 
